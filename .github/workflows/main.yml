@@ -1,0 +1,38 @@
+name: CI/CD Kartu Nama
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test-cards:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ambil kode
+        uses: actions/checkout@v4
+
+      - name: Jalankan validasi
+        run: |
+          chmod +x scripts/test-cards.sh
+          ./scripts/test-cards.sh
+
+  deploy-ssh:
+    needs: test-cards
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ambil kode
+        uses: actions/checkout@v4
+
+      - name: Sinkronisasi ke hosting via SSH
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_SERVER }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 2248
+          source: "cards/*"
+          target: "/home/namecards/web/namecards.duckdns.org/public_html/cards"
+          strip_components: 1
