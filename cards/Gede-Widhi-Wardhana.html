@@ -1,162 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/Belajar Ngoding/style.css" />
-    <style></style>
+    <title>Kartu Nama - GedeWidhiWardhana</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background-color: #f3f4f6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+      .card {
+        background-color: #ffffff;
+        max-width: 420px;
+        width: 100%;
+        border: 1px solid #e5e7eb;
+        border-top: 5px solid #dc2626;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        padding: 32px 28px;
+      }
+      h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 6px;
+      }
+      .role {
+        font-size: 14px;
+        font-weight: 600;
+        color: #dc2626;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 16px;
+      }
+      .bio {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #4b5563;
+        margin-bottom: 24px;
+        border-bottom: 1px solid #f3f4f6;
+        padding-bottom: 20px;
+      }
+      .contact-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 13px;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #374151;
+        text-decoration: none;
+      }
+      .contact-item:hover {
+        color: #dc2626;
+      }
+      .badge {
+        display: inline-block;
+        margin-top: 24px;
+        font-size: 11px;
+        background-color: #f9fafb;
+        color: #6b7280;
+        border: 1px solid #e5e7eb;
+        padding: 4px 8px;
+        font-weight: 500;
+      }
+    </style>
   </head>
   <body>
-    <main>
-      <div class="container">
-        <!-- Biodata diri  -->
-        <div>
-          <!-- Judul -->
-          <div class="header">
-            <div>
-              <h3>DATA PRIBADI</h3>
-            </div>
-          </div>
-          <!-- Konten -->
-          <div class="biodata">
-            <div class="biodata_container">
-              <div class="biodata_content">
-                <div class="biodata_key-container">
-                  <p>Nama</p>
-                  <p>Tempat, Tanggal Lahir</p>
-                  <p>Jenis Kelamin</p>
-                  <p>Perguruan Tinggi</p>
-                  <p>Fakultas</p>
-                  <p>Prodi</p>
-                  <p>No. Telp</p>
-                  <p>Email</p>
-                  <p>Linkedin</p>
-                </div>
-                <div class="biodata_value-container">
-                  <!-- Masukkan nama disini  -->
-                  <p>: I Made Aditya</p>
-                  <!-- Masukkan tempat tanggal lahir disini  -->
-                  <p>: Denpasar, 02 Oktober 2004</p>
-                  <!-- Masukkan jenis kelamin disini  -->
-                  <p>: Laki-laki</p>
-                  <p>: Universitas Udayana</p>
-                  <p>: Matematika dan Ilmu Pengetahuan Alam</p>
-                  <p>: Informatika</p>
-                  <!-- Masukkan nomor telepon disini  -->
-                  <p>: 080111222333</p>
-                  <!-- Masukkan email disini  -->
-                  <p>: aditadit@gmail.com</p>
-                  <!-- Masukkan linkedin disini  -->
-                  <p>: aditadit</p>
-                </div>
-              </div>
-              <div>
-                <div class="biodata__photo-container">
-                  <!-- Masukkan nama file fotopada src, setelah "public/ (lengkap dengan ekstensinya)" -->
-                  <img class="biodata__photo" src="public/foto-profil.jpeg" alt="foto profil" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Riwayat Pendidikan  -->
-        <div>
-          <!-- Judul -->
-          <div class="header">
-            <div>
-              <h3>RIWAYAT PENDIDIKAN</h3>
-            </div>
-          </div>
-          <!-- Konten  -->
-          <div class="riwayat">
-            <ul>
-              <li>
-                <div>
-                  <!-- Masukkan nama SD/yang sederajat disini  -->
-                  <p>SD Negeri 1</p>
-                  <!-- Masukkan rentang tahun di SD/yang sederajat disini  -->
-                  <p>(2012 - 2018)</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <!-- Masukkan nama SMP/yang sederajat disini  -->
-                  <p>SMP Negeri 1</p>
-                  <!-- Masukkan rentang tahun di SMP/yang sederajat disini  -->
-                  <p>(2018 - 2021)</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <!-- Masukkan nama SMA/SMK/yang sederajat disini  -->
-                  <p>SMA Negeri 1</p>
-                  <!-- Masukkan nama SMA/SMK/yang sederajat disini  -->
-                  <p>(2021 - 2024)</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <p>Universitas Udayana</p>
-                  <p>(2024 - sekarang)</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- Pengalaman diri  -->
-        <div>
-          <!-- Judul -->
-          <div class="header">
-            <div>
-              <h3>PENGALAMAN</h3>
-            </div>
-          </div>
-          <!-- Konten  -->
-          <div class="pengalaman">
-            <ul>
-              <!-- Item pengalaman kalian  -->
-              <li>
-                <div class="pengalaman__item">
-                  <div class="pengalaman__item-key">
-                    <!-- Masukkan pengalaman organisasi/prestasi/lainnya disini -->
-                    <p>Ketua OSIS SMA</p>
-                  </div>
-                  <div class="pengalaman__item-year">
-                    <!-- Masukkan tahunnya disini -->
-                    <p>2022-2023</p>
-                  </div>
-                </div>
-              </li>
-              <!-- Item pengalaman kalian  -->
-              <li>
-                <div class="pengalaman__item">
-                  <div class="pengalaman__item-key">
-                    <!-- Masukkan pengalaman organisasi/prestasi/lainnya disini -->
-                    <p>Juara I Balap Karung Tingkat Provinsi</p>
-                  </div>
-                  <div class="pengalaman__item-year">
-                    <!-- Masukkan tahunnya disini -->
-                    <p>2020</p>
-                  </div>
-                </div>
-              </li>
-              <!-- Item pengalaman kalian  -->
-              <li>
-                <div class="pengalaman__item">
-                  <div class="pengalaman__item-key">
-                    <!-- Masukkan pengalaman organisasi/prestasi/lainnya disini -->
-                    <p>MC HUT SMA</p>
-                  </div>
-                  <div class="pengalaman__item-year">
-                    <!-- Masukkan tahunnya disini -->
-                    <p>2021</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <main class="card">
+      <!-- Tag Wajib TC-02 -->
+      <h1>GedeWidhiWardhana</h1>
+      <div class="role">Informatika</div>
+
+      <p class="bio">
+        Hai, saya widhi. Saya seorang mahasiswa Informatika di Universitas Udayana. Saya memiliki minat dalam pengembangan web dan teknologi terbaru. Saya senang belajar hal-hal baru dan berkolaborasi dalam proyek-proyek yang menantang.]
+      </p>
+
+      <div class="contact-list">
+        <a class="contact-item" href="wardhanagedewidhi@gmail.com"> <strong>Email:</strong> wardhanagedewidhi@gmail.com </a>
+        <a class="contact-item" href="https://github.com/Gede-Widhi-wardhana" target="_blank" rel="noopener noreferrer"> <strong>GitHub:</strong> github.com/Gede-Widhi-wardhana </a>
+      </div>
+
+      <div>
+        <span class="badge">Deployed via GitHub Actions CI/CD</span>
       </div>
     </main>
   </body>
