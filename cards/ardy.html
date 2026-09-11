@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kartu Nama - Ardy</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .card {
+      background-color: #ffffff;
+      max-width: 420px;
+      width: 100%;
+      border: 1px solid #e5e7eb;
+      border-top: 5px solid #dc2626;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      padding: 32px 28px;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 6px;
+    }
+    .role {
+      font-size: 14px;
+      font-weight: 600;
+      color: #dc2626;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+    .bio {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #4b5563;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #f3f4f6;
+      padding-bottom: 20px;
+    }
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 13px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #374151;
+      text-decoration: none;
+    }
+    .contact-item:hover {
+      color: #dc2626;
+    }
+    .badge {
+      display: inline-block;
+      margin-top: 24px;
+      font-size: 11px;
+      background-color: #f9fafb;
+      color: #6b7280;
+      border: 1px solid #e5e7eb;
+      padding: 4px 8px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="card">
+    <!-- Tag Wajib TC-02 -->
+    <h1>I Putu Ardyana Darma Nugraha</h1>
+    <div class="role">Informatika</div>
+
+    <p class="bio">
+      Nama panggilan saya adalah Ardy, seorang mahasiswa Universitas Udayana Program Studi Informatika. Saya jago Python dan tertarik di bidang Data Science.
+    </p>
+
+    <div class="contact-list">
+      <a class="contact-item" href="mailto:24030.nugraha@student.unud.ac.id">
+        <strong>Email:</strong> 24030.nugraha@student.unud.ac.id
+      </a>
+      <a class="contact-item" href="https://github.com/Ardy07" target="_blank" rel="noopener noreferrer">
+        <strong>GitHub:</strong> github.com/Ardy07
+      </a>
+      <a class="contact-item" href="https://linkedin.com/in/Ardy07" target="_blank" rel="noopener noreferrer">
+        <strong>LinkedIn:</strong> linkedin.com/in/Ardy07
+      </a>
+    </div>
+
+    <div>
+      <span class="badge">Deployed via GitHub Actions CI/CD</span>
+    </div>
+  </main>
+
+</body>
+</html>
